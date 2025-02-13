@@ -19,25 +19,10 @@ return {
       local lspconfig = require("lspconfig")
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-      lspconfig.lua_ls.setup({
+      lspconfig.verible.setup({
         capabilities = capabilities,
       })
-      lspconfig.jdtls.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.clangd.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.rust_analyzer.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.basedpyright.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.asm_lsp.setup({
-        capabilities = capabilities,
-      })
-      lspconfig.ts_ls.setup({
+      lspconfig.svlangserver.setup({
         capabilities = capabilities,
       })
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
